@@ -2,20 +2,15 @@ public class Palindrome
 	{
 	
 	public static int Pali(String x)
-	{	int i, len, flag=1;
+	{	int i, len;
 		len=x.length();
 		for(i=0; i<=(len/2); i++)
 		{
-			if (x.charAt(0+i)!=x.charAt(len-1-i))
-			{	
-				flag =0;
-				//System.out.println("Not a palindrome!\n");
-				return flag;
-			}			
+			if (x.charAt(i)!=x.charAt(len-1-i))
+				return 0;		
 		}
-		
-		return flag;
-			//System.out.println("Palindrome!\n");	
+
+		return 1;
 	}
 	
 	public static void main(String[] args) 
